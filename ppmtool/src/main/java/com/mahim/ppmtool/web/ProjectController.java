@@ -3,17 +3,13 @@ package com.mahim.ppmtool.web;
 import com.mahim.ppmtool.domain.Project;
 import com.mahim.ppmtool.services.MapValidationErrorService;
 import com.mahim.ppmtool.services.ProjectService;
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/project")
@@ -49,6 +45,6 @@ public class ProjectController {
     @DeleteMapping("/{projectId}")
     public ResponseEntity<?> deleteProject(@PathVariable String projectId) {
         projectService.deleteProjectByIdentifier(projectId);
-        return new ResponseEntity<>("Project with id " + projectId + " was deleted", HttpStatus.OK);
+        return new ResponseEntity<>("Project with id '" + projectId + "' was deleted", HttpStatus.OK);
     }
 }

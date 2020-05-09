@@ -22,11 +22,12 @@ class UpdateProject extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log("i am in update project: ", nextProps);
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
 
-    if (nextProps.project) {
+    if (nextProps.project !== this.props.project) {
       const {
         id,
         projectName,

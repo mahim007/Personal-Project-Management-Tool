@@ -22,7 +22,6 @@ class UpdateProject extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("i am in update project: ", nextProps);
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
@@ -54,7 +53,6 @@ class UpdateProject extends Component {
   }
 
   onChange(e) {
-    console.log(e.target.name + " " + e.target.value);
     this.setState({ [e.target.name]: e.target.value });
   }
 

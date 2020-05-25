@@ -16,7 +16,7 @@ class Backlog extends Component {
       if (task.status === "DONE")
         return <ProjectTask key={task.id} projectTask={task} />;
     });
-    console.log("!!!!" + todoTasks);
+
     return (
       <div className="container">
         <div className="row">

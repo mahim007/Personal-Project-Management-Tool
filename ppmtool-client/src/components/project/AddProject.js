@@ -21,7 +21,6 @@ class AddProject extends React.Component {
   }
 
   onChange(e) {
-    console.log("event: ", e.target);
     this.setState({ [e.target.name]: e.target.value });
   }
 

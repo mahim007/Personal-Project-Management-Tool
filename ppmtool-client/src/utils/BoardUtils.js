@@ -9,7 +9,7 @@ export const boradAlgorithm = (errors, project_tasks) => {
           {errors.projectNotFound}
         </div>
       );
-    }else if (errors && errors.projectIdentifier) {
+    } else if (errors && errors.projectIdentifier) {
       return (
         <div className="alert alert-danger text-center" role="alert">
           {errors.projectIdentifier}

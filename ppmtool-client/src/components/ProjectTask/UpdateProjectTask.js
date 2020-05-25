@@ -34,9 +34,7 @@ class UpdateProjectTask extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps.projectTask);
     if (nextProps.projectTask !== this.props.projectTask) {
-      console.log("i am here!");
       const {
         id,
         projectSequence,
